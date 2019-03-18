@@ -1,0 +1,22 @@
+nodejs.org -> baixar e instalar (recomendo versão estável)
+
+
+Instalar dependências globais (em qualquer pasta):
+
+npm install -g typescript parcel jest
+
+
+Instalar as dependências do projeto (entrar na pasta do projeto):
+
+npm install
+
+
+Para rodar o parcel:
+
+parcel index.html
+
+Entrar no navegador na URL que ele fornece.
+
+Para rodar o Jest:
+
+jest
