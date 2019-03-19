@@ -1,4 +1,4 @@
-# Uma simples lista de tarefas escrita em typescript sem framework
+# Lista de tarefas escrita em typescript sem framework
 
 ## Iniciando
 
