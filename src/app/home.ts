@@ -1,5 +1,5 @@
-import { Task } from "./task/task";
-import { TaskList } from "./task/taskList";
+import { Task } from "./model/task";
+import { TaskList } from "./model/taskList";
 
 let taskList: TaskList = new TaskList();
 
@@ -22,9 +22,9 @@ export function createInput() {
     button.textContent = "Adicionar";
     button.onclick = () => {
         let task: Task = new Task(inputTask.value, false);
-        if(taskList.addTask(task)){
-            location.reload(); 
-        } else{
+        if (taskList.addTask(task)) {
+            location.reload();
+        } else {
             alert('Erro');
         }
     }
@@ -36,13 +36,13 @@ export function createTable() {
     let tasks = [];
     tasks = taskList.taskList();
     let table = document.getElementById("tableBody");
-    if(tasks && tasks.length > 0){
+    if (tasks && tasks.length > 0) {
         tasks.forEach(t => {
             let tRow = document.createElement("tr");
             let tdName = document.createElement('td');
             let tdDone = document.createElement("td");
             let tdAcao = document.createElement("td");
-            
+
             tdName.innerHTML = t.name;
             tdDone.innerHTML = t.done ? 'Sim' : 'Não'
 
@@ -51,19 +51,19 @@ export function createTable() {
             deleteButton.textContent = "Deletar";
             deleteButton.onclick = () => {
                 if (taskList.removeTask(t)) {
-                  location.reload();
-                }else{
+                    location.reload();
+                } else {
                     alert('Erro');
                 }
-                
+
             };
 
             let setDoneButton = document.createElement("button");
             setDoneButton.className = "btn btn-success mb-2 btn-block";
-            setDoneButton.textContent = t.done? 'Desfazer' : 'Pronto';
+            setDoneButton.textContent = t.done ? 'Desfazer' : 'Pronto';
             setDoneButton.onclick = () => {
-                if (taskList.setDone(t)){
-                    location.reload(); 
+                if (taskList.setDone(t)) {
+                    location.reload();
                 } else {
                     alert('Erro');
                 }
@@ -71,7 +71,7 @@ export function createTable() {
 
             tdAcao.appendChild(setDoneButton);
             tdAcao.appendChild(deleteButton);
-            
+
             tRow.appendChild(tdName);
             tRow.appendChild(tdDone);
             tRow.appendChild(tdAcao);
@@ -89,8 +89,8 @@ export function createTable() {
         tRow.appendChild(tdD);
         table.appendChild(tRow);
     }
-    
-    
+
+
 }
 
 init()

@@ -18,6 +18,7 @@
     ]
   },
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel ./src/index.html",
+    "test": "jest ./src"
   }
 }
