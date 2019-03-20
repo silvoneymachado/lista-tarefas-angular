@@ -10,7 +10,7 @@
     "transform": {
       ".(ts|tsx)": "./node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx?)$",
+    "testRegex": "(./src/__tests__/.*|(\\.|/)(test|spec))\\.(tsx?)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -20,5 +20,8 @@
   "scripts": {
     "start": "parcel ./src/index.html",
     "test": "jest ./src"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1"
   }
 }

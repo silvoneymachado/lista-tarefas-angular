@@ -1,6 +1,7 @@
 import { Task } from "./model/task";
 import { TaskList } from "./model/taskList";
 
+
 let taskList: TaskList = new TaskList();
 
 export function init() {
