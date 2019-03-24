@@ -1,4 +1,4 @@
-# Lista de tarefas escrita em typescript sem framework
+# Lista de tarefas escrita em angular 7
 
 ## Iniciando
 
