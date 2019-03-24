@@ -1,27 +1,22 @@
 {
-    "compilerOptions": {
-        "baseUrl": ".",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "inlineSourceMap": false,
-        "inlineSources": false,
-        "jsx": "react",
-        "lib": [
-            "dom",
-            "es2015",
-            "es2016"
-        ],
-        "module": "esnext",
-        "moduleResolution": "node",
-        "noImplicitAny": true,
-        "noImplicitReturns": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": false,
-        "outDir": "build",
-        "sourceMap": true,
-        "target": "es2016"
-    },
-    "exclude": [
-        "node_modules"
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
     ]
+  }
 }

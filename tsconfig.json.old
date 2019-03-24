@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "inlineSourceMap": false,
+        "inlineSources": false,
+        "jsx": "react",
+        "lib": [
+            "dom",
+            "es2015",
+            "es2016"
+        ],
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": false,
+        "outDir": "build",
+        "sourceMap": true,
+        "target": "es2016"
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "files": [
+        "./src/app/index.ts"
+    ]
+}

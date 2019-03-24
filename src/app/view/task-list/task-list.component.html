@@ -1,0 +1,43 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="nav navbar" align="center">
+        <h1>A Fazer</h1>
+      </div>
+     <form class="form-inline">
+       <div class="form-group mx-sm-3 mb-2">
+         <label for="inputPassword2" class="sr-only">Tarefa</label>
+         <input type="text" name="taskName" class="form-control" id="inputtask2" [(ngModel)]="task.name" placeholder="Digite o nome para a tarefa"/>
+       </div>
+       <button type="button" (click)="addTask()" class="btn btn-primary mb-2">Adicionar</button>
+     </form>
+      <table class="table table-bordered table-striped">
+        <thead align="center">
+          <th>Tarefa</th>
+          <th>Pronta?</th>
+          <th>Ação</th>
+        </thead>
+        <tbody id="tableBody" align="center">
+          <tr *ngFor="let t of tasks; let i = index;">
+            <td>{{t.name}}</td>
+            <td>{{t.done ? 'Sim' : 'Não'}} </td>
+            <td>
+              <button type="button" (click)="setDone(t)"
+                class="btn btn-secondary mb-2 btn-block">{{t.done ? 'Desfazer' : 'Pronto'}}</button>
+              <button type="button" (click)="delete(t)"  class="btn btn-danger mb-2 btn-block">Deletar</button>
+            </td>
+          </tr>
+          <tr *ngIf="!tasks || tasks.length === 0">
+            <td colspan="3" align="center">
+              Não há tarefas adicionadas
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
+
