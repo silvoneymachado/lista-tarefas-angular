@@ -4,7 +4,7 @@
     <div class="col-md-3"></div>
     <div class="col-md-6">
       <div class="nav navbar" align="center">
-        <h1>A Fazer</h1>
+        <h3>A Fazer</h3>
       </div>
      <form class="form-inline">
        <div class="form-group mx-sm-3 mb-2">
@@ -13,20 +13,23 @@
        </div>
        <button type="button" (click)="addTask()" class="btn btn-primary mb-2">Adicionar</button>
      </form>
-      <table class="table table-bordered table-striped">
+      <table class="table table-bordered table-striped table-sm">
         <thead align="center">
           <th>Tarefa</th>
           <th>Pronta?</th>
-          <th>Ação</th>
+          <th colspan="2">Ação</th>
         </thead>
         <tbody id="tableBody" align="center">
           <tr *ngFor="let t of tasks; let i = index;">
             <td>{{t.name}}</td>
             <td>{{t.done ? 'Sim' : 'Não'}} </td>
             <td>
-              <button type="button" (click)="setDone(t)"
-                class="btn btn-secondary mb-2 btn-block">{{t.done ? 'Desfazer' : 'Pronto'}}</button>
-              <button type="button" (click)="delete(t)"  class="btn btn-danger mb-2 btn-block">Deletar</button>
+                <button  type="button" (click)="setDone(t)" class="btn btn-primary mb-2">
+                  <fa name="check-square"></fa>
+                </button>
+            </td>
+            <td>
+                <button type="button" (click)="delete(t)"  class="btn btn-danger mb-2"><fa name="trash" animation="none"></fa></button>
             </td>
           </tr>
           <tr *ngIf="!tasks || tasks.length === 0">
