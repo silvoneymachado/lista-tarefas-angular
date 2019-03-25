@@ -1,0 +1,36 @@
+{
+	"tests": "src\\__tests__\\e2e\\tests\\**\\*.js",
+	"output": "./src/__tests__/e2e/output",
+	"helpers": {
+		"WebDriverIO": {
+			"browser": "chrome",
+			"url": "http://localhost",
+			"windowSize": "maximize",
+			"smartWait": 5000,
+			"timeouts": {
+				"script": 60000,
+				"page load": 10000
+			}
+		},
+		"DbHelper": {
+			"require": "./node_modules/codeceptjs-dbhelper"
+		},
+		"CmdHelper": {
+			"require": "./node_modules/codeceptjs-cmdhelper"
+		}
+	},
+	"bootstrap": false,
+	"mocha": {
+		"reporterOptions": {
+			"codeceptjs-cli-reporter": {
+				"stdout": "-",
+				"options": {
+					"steps": true
+				}
+			},
+			"json": {
+				"stdout": "src\\__tests__\\e2e\\output\\output.json"
+			}
+		}
+	}
+}

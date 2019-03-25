@@ -3,16 +3,17 @@
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
-      <div class="nav navbar" align="center">
+      <div class="nav navbar">
         <h3>A Fazer</h3>
       </div>
-     <form class="form-inline">
-       <div class="form-group mx-sm-3 mb-2">
-         <label for="inputPassword2" class="sr-only">Tarefa</label>
-         <input type="text" name="taskName" class="form-control" id="inputtask2" [(ngModel)]="task.name" placeholder="Digite o nome para a tarefa"/>
-       </div>
-       <button type="button" (click)="addTask()" class="btn btn-primary mb-2">Adicionar</button>
-     </form>
+      <div class="input-group">
+        <label for="inputPassword2" class="sr-only">Tarefa</label>
+        <input type="text" name="taskName" class="form-control" id="inputtask2" [(ngModel)]="task.name" placeholder="Digite o nome para a tarefa"/>
+        <div class="input-group-append">
+          <button type="button" (click)="addTask()" class="btn btn-primary mb-2">Adicionar</button>
+        </div>
+      </div>
+
       <table class="table table-bordered table-striped table-sm">
         <thead align="center">
           <th>Tarefa</th>
@@ -24,12 +25,12 @@
             <td>{{t.name}}</td>
             <td>{{t.done ? 'Sim' : 'Não'}} </td>
             <td>
-                <button  type="button" (click)="setDone(t)" class="btn btn-primary mb-2">
-                  <fa name="check-square"></fa>
-                </button>
+              <button  type="button" (click)="setDone(t)" class="btn btn-primary mb-2">
+                <fa name="check-square"></fa>
+              </button>
             </td>
             <td>
-                <button type="button" (click)="delete(t)"  class="btn btn-danger mb-2"><fa name="trash" animation="none"></fa></button>
+              <button type="button" (click)="delete(t)"  class="btn btn-danger mb-2"><fa name="trash" animation="none"></fa></button>
             </td>
           </tr>
           <tr *ngIf="!tasks || tasks.length === 0">
