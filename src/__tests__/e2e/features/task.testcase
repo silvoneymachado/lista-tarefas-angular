@@ -1,0 +1,56 @@
+# Generated with ❤ by Concordia
+#
+# THIS IS A GENERATED FILE - MODIFICATIONS CAN BE LOST !
+
+import "task.feature"
+
+@generated
+@scenario(1)
+@variant(1)
+Test case: Adiciona uma tarefas ao clicar em Adicionar - 1
+  Given that I am in the "http://localhost:4200/"  # [Lista de tarefas]
+  When I fill <#inputtask2> with "tarefa teste"
+    And I click on <#btnAdicionar>
+  Then I see "tarefa teste"
+
+# ------------------------------------------------------------------------------
+
+@generated
+@scenario(2)
+@variant(1)
+Test case: Deleta uma tarefa apos adiciona-la a lista - 1
+  Given that I am in the "http://localhost:4200/"  # [Lista de tarefas]
+  When I fill <#inputtask2> with "tarefa teste"
+    And I click on <#btnAdicionar>
+  Then I see "tarefa teste"
+  Then I click on <#btnDelete>
+  Then I not see "tarefa teste"
+
+# ------------------------------------------------------------------------------
+
+@generated
+@scenario(3)
+@variant(1)
+Test case: Renomeia uma tarefa apos adiciona-la a lista - 1
+  Given that I am in the "http://localhost:4200/"  # [Lista de tarefas]
+  When I fill <#inputtask2> with "tarefa teste"
+    And I click on <#btnAdicionar>
+  Then I see "tarefa teste"
+  Then I click on <#btnEdit>
+  Then I fill popup with "teste"
+  Then I confirm popup
+  Then I see "teste"
+
+# ------------------------------------------------------------------------------
+
+@generated
+@scenario(4)
+@variant(1)
+Test case: Seta como pronto a tarefa recem adicionada - 1
+  Given that I am in the "http://localhost:4200/"  # [Lista de tarefas]
+  When I fill <#inputtask2> with "tarefa teste"
+    And I click on <#btnAdicionar>
+  Then I see "Não"
+  Then I see "tarefa teste"
+  Then I click on <#btnDone>
+  Then I see "Sim"

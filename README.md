@@ -26,6 +26,28 @@ npm i
 npm run start
 ```
 
+### Rode os testes unitários com:
+
+```
+npm run test
+```
+
+### Rode os testes e2e:
+
+- Cada comando em um terminal diferente e na ordem
+
+```
+npm run start
+```
+
+```
+npm run concordia:serve
+```
+
+```
+npm run e2e
+```
+
 
 
 #### This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.

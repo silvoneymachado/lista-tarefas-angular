@@ -28,13 +28,13 @@ export class TaskListComponent implements OnInit {
   }
 
   public delete(t: Task): void {
-    if (confirm('Deseja realmente apagar a tarefa?')) {
-      this.taskService.deleteTask(t).then(res => {
-        if (res) {
-          this.getTasks();
-        }
-      }).catch(err => console.log(err));
-    }
+    this.taskService.deleteTask(t).then(res => {
+      if (res) {
+        this.getTasks();
+      }
+    }).catch(err => console.log(err));
+    // if (confirm('Deseja realmente apagar a tarefa?')) {
+    // }
   }
 
   public setDone(t: Task): void {
