@@ -6,7 +6,7 @@
 `Use sudo no linux/macOS`
 
 ```
-npm install -g typescript parcel jest
+npm install -g typescript npm install -g @angular/cli
 ```
 
 ### Instale as dependências locais
@@ -50,7 +50,7 @@ npm run e2e
 
 
 
-#### This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+<!-- #### This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
 
 ### Code scaffolding
@@ -64,12 +64,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ### Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md). -->
 
 
 ## References: 
 
 - [Bootstrap with angular 7](https://codeburst.io/getting-started-with-angular-7-and-bootstrap-4-styling-6011b206080)
-
+- [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md)
 
 
