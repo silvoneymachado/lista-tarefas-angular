@@ -28,13 +28,13 @@ export class TaskListComponent implements OnInit {
   }
 
   public delete(t: Task): void {
-    this.taskService.deleteTask(t).then(res => {
-      if (res) {
-        this.getTasks();
-      }
-    }).catch(err => console.log(err));
-    // if (confirm('Deseja realmente apagar a tarefa?')) {
-    // }
+    if (confirm('Deseja realmente apagar a tarefa?')) {
+      this.taskService.deleteTask(t).then(res => {
+        if (res) {
+          this.getTasks();
+        }
+      }).catch(err => console.log(err));
+    }
   }
 
   public setDone(t: Task): void {
@@ -60,6 +60,7 @@ export class TaskListComponent implements OnInit {
 
   public updateTask(t: Task): void {
     const newName = prompt('Digite um novo nome para tarefa: ', t.name);
+    console.log(newName);
     if (newName != null) {
       t.name = newName;
       this.taskService.updateTask(t).then(res => {

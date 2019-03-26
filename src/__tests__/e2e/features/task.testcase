@@ -24,6 +24,7 @@ Test case: Deleta uma tarefa apos adiciona-la a lista - 1
     And I click on <#btnAdicionar>
   Then I see "tarefa teste"
   Then I click on <#btnDelete>
+  Then I accept the confirmation
   Then I not see "tarefa teste"
 
 # ------------------------------------------------------------------------------
@@ -37,9 +38,9 @@ Test case: Renomeia uma tarefa apos adiciona-la a lista - 1
     And I click on <#btnAdicionar>
   Then I see "tarefa teste"
   Then I click on <#btnEdit>
-  Then I fill popup with "teste"
-  Then I confirm popup
-  Then I see "teste"
+  Then I type "novo" in the prompt
+  Then I accept the prompt
+  Then I see "novo"
 
 # ------------------------------------------------------------------------------
 
