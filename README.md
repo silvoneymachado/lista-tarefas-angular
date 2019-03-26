@@ -1,4 +1,4 @@
-# Lista de tarefas escrita em angular 7
+# Lista de tarefas - Projeto Integrador
 
 ## Iniciando
 
