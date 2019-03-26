@@ -6,7 +6,7 @@
 `Use sudo no linux/macOS`
 
 ```
-npm install -g typescript npm install -g @angular/cli
+npm install -g typescript npm install -g @angular/cli jest
 ```
 
 ### Instale as dependências locais
@@ -71,5 +71,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 - [Bootstrap with angular 7](https://codeburst.io/getting-started-with-angular-7-and-bootstrap-4-styling-6011b206080)
 - [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md)
-
+- [ConcordiaLang](https://github.com/thiagodp/concordialang/)
+- [JestJs Docs](https://jestjs.io/docs/en/getting-started)
 
