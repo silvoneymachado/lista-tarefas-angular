@@ -7,6 +7,7 @@
 		"build": "ng build",
 		"lint": "ng lint",
 		"test": "jest ./src",
+		"e2e": "npm run start && npm run concordia:codeceptjs",
 		"concordia:codeceptjs": "codeceptjs run --reporter mocha-multi --colors || echo ."
 	},
 	"private": true,
