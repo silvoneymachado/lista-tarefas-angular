@@ -27,6 +27,17 @@ describe('TaskComponent', () => {
     });
   });
 
+  it('Deve alterar o nome da tarefa adicionada', () => {
+    const newName = 'Test task new';
+    task.name = newName;
+    service.updateTask(task).then(() => {
+      service.Task().then(ts => {
+        tasks = ts;
+        expect(tasks[0].name).toEqual(newName);
+      });
+    });
+  });
+
   it('Deve apagar uma tarefa informada', () => {
     service.deleteTask(task).then(() => {
       service.Task().then(ts => {

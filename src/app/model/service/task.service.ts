@@ -90,4 +90,19 @@ export class TaskService {
       }
     });
   }
+
+  public updateTask(t: Task): Promise<boolean> {
+    return new Promise<boolean>((resolve, reject) => {
+      try {
+        this.getTasks();
+        if (this.tasks.length > 0) {
+          const index = this.tasks.findIndex(ts => ts.id === t.id);
+          this.tasks[index] = t;
+          resolve(this.setTasks(this.tasks));
+        }
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }
 }

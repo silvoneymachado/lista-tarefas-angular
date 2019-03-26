@@ -18,19 +18,22 @@
         <thead align="center">
           <th>Tarefa</th>
           <th>Pronta?</th>
-          <th colspan="2">Ação</th>
+          <th colspan="3">Ação</th>
         </thead>
         <tbody id="tableBody" align="center">
           <tr *ngFor="let t of tasks; let i = index;">
             <td>{{t.name}}</td>
             <td>{{t.done ? 'Sim' : 'Não'}} </td>
             <td>
-              <button  type="button" (click)="setDone(t)" class="btn btn-primary mb-2">
+              <button  type="button" (click)="setDone(t)" class="btn btn-primary mb-2" title="Pronto">
                 <fa name="check-square"></fa>
               </button>
             </td>
             <td>
-              <button type="button" (click)="delete(t)"  class="btn btn-danger mb-2"><fa name="trash" animation="none"></fa></button>
+              <button type="button" (click)="updateTask(t)" class="btn btn-secondary mb-2" title="Editar"><fa name="edit" animation="none"></fa> </button>
+            </td>
+            <td>
+              <button type="button" (click)="delete(t)"  class="btn btn-danger mb-2" title="Deletar"><fa name="trash" animation="none"></fa></button>
             </td>
           </tr>
           <tr *ngIf="!tasks || tasks.length === 0">
