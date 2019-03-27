@@ -6,7 +6,7 @@
 `Use sudo no linux/macOS`
 
 ```
-npm install -g typescript npm install -g @angular/cli jest
+npm install -g typescript npm install -g @angular/cli jest concordialang
 ```
 
 ### Instale as dependências locais
