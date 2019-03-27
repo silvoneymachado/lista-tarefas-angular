@@ -72,7 +72,7 @@ export class TaskService {
   }
 
   private setIdTask(t: Task): Task {
-    t.id = this.tasks.length + 1;
+    t.id = this.tasks[this.tasks.length -1].id + 1;
     return t;
   }
 
