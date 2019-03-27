@@ -28,18 +28,20 @@ Scenario("Adiciona e renomeia uma tarefa | Renomeia uma tarefa apos adiciona-la 
     I.click('#btnAdicionar'); // (35,5)
     I.see("tarefa teste"); // (36,3)
     I.click('#btnEdit'); // (37,3)
-    // COMMAND NOT ACCEPTED -> "location": {"line":38,"column":3}, "action": "fill", "options": ["inside","prompt"], "targets": [], "targetTypes": [], "values": ["novo"]
-    I.acceptPopup(); // (39,3)
-    I.see("novo"); // (40,3)
+    I.seeElement('#btnCancelarEdicao'); // (38,3)
+    I.fillField('#inputtask2', "novo"); // (39,3)
+    I.click('#btnAdicionar'); // (40,3)
+    I.see("novo"); // (41,3)
+    I.wait(3); // (42,3)
 });
 
 Scenario("Adiciona uma tarefa e seta como pronto | Seta como pronto a tarefa recem adicionada - 1", (I) => {
-    I.amOnPage("http://localhost:4200/"); // (46,3)  [Lista de tarefas]
-    I.fillField('#inputtask2', "tarefa teste"); // (47,3)
-    I.click('#btnAdicionar'); // (48,5)
-    I.see("Não"); // (49,3)
-    I.see("tarefa teste"); // (50,3)
-    I.click('#btnDone'); // (51,3)
-    I.see("Sim"); // (52,3)
+    I.amOnPage("http://localhost:4200/"); // (48,3)  [Lista de tarefas]
+    I.fillField('#inputtask2', "tarefa teste"); // (49,3)
+    I.click('#btnAdicionar'); // (50,5)
+    I.see("Não"); // (51,3)
+    I.see("tarefa teste"); // (52,3)
+    I.click('#btnDone'); // (53,3)
+    I.see("Sim"); // (54,3)
 });
 

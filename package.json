@@ -9,7 +9,7 @@
 		"test": "jest ./src",
     "e2e": "concordia",
     "concordia:serve": "concordia --plugin-serve codeceptjs",
-		"concordia:codeceptjs": "codeceptjs run --reporter mocha-multi --colors || echo ."
+    "concordia:codeceptjs": "codeceptjs run --reporter mocha-multi --colors || echo ."
 	},
 	"private": true,
 	"dependencies": {

@@ -3,89 +3,60 @@
     {
       "title": "Adiciona uma tarefa a lista | Adiciona uma tarefas ao clicar em Adicionar - 1",
       "fullTitle": "Gestao de tarefas: Adiciona uma tarefa a lista | Adiciona uma tarefas ao clicar em Adicionar - 1",
-      "duration": 1515,
+      "duration": 1950,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "Adiciona e deleta uma tarefa | Deleta uma tarefa apos adiciona-la a lista - 1",
       "fullTitle": "Gestao de tarefas: Adiciona e deleta uma tarefa | Deleta uma tarefa apos adiciona-la a lista - 1",
-      "duration": 1806,
+      "duration": 2135,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "Adiciona e renomeia uma tarefa | Renomeia uma tarefa apos adiciona-la a lista - 1",
       "fullTitle": "Gestao de tarefas: Adiciona e renomeia uma tarefa | Renomeia uma tarefa apos adiciona-la a lista - 1",
-      "duration": 1848,
+      "duration": 4974,
       "currentRetry": 0,
-      "err": {
-        "params": {
-          "jar": "web page",
-          "customMessage": "",
-          "type": "to include",
-          "needle": "novo",
-          "haystack": "A Fazer\nTarefa\nAdicionar\nTarefa Pronta? Ação\ntarefa teste Não"
-        },
-        "template": "{{customMessage}}expected {{jar}} {{type}} \"{{needle}}\"",
-        "showDiff": true,
-        "actual": "A Fazer\nTarefa\nAdicionar\nTarefa Pronta? Ação\ntarefa teste Não",
-        "expected": "novo",
-        "message": "expected web page to include \"novo\"",
-        "stack": "expected web page to include \"novo\"\n\nScenario Steps:\n\n- I.see(\"novo\") at Test.Scenario (src\\__tests__\\e2e\\tests\\task.js:33:7)\n- I.acceptPopup() at Test.Scenario (src\\__tests__\\e2e\\tests\\task.js:32:7)\n- I.click(\"#btnEdit\") at Test.Scenario (src\\__tests__\\e2e\\tests\\task.js:30:7)\n- I.see(\"tarefa teste\") at Test.Scenario (src\\__tests__\\e2e\\tests\\task.js:29:7)\n- I.click(\"#btnAdicionar\") at Test.Scenario (src\\__tests__\\e2e\\tests\\task.js:28:7)\n- I.fillField(\"#inputtask2\", \"tarefa teste\") at Test.Scenario (src\\__tests__\\e2e\\tests\\task.js:27:7)\n- I.amOnPage(\"http://localhost:4200/\") at Test.Scenario (src\\__tests__\\e2e\\tests\\task.js:26:7)\n\n"
-      }
+      "err": {}
     },
     {
       "title": "Adiciona uma tarefa e seta como pronto | Seta como pronto a tarefa recem adicionada - 1",
       "fullTitle": "Gestao de tarefas: Adiciona uma tarefa e seta como pronto | Seta como pronto a tarefa recem adicionada - 1",
-      "duration": 1432,
+      "duration": 1796,
       "currentRetry": 0,
       "err": {}
     }
   ],
   "pending": [],
-  "failures": [
-    {
-      "title": "Adiciona e renomeia uma tarefa | Renomeia uma tarefa apos adiciona-la a lista - 1",
-      "fullTitle": "Gestao de tarefas: Adiciona e renomeia uma tarefa | Renomeia uma tarefa apos adiciona-la a lista - 1",
-      "duration": 1848,
-      "currentRetry": 0,
-      "err": {
-        "params": {
-          "jar": "web page",
-          "customMessage": "",
-          "type": "to include",
-          "needle": "novo",
-          "haystack": "A Fazer\nTarefa\nAdicionar\nTarefa Pronta? Ação\ntarefa teste Não"
-        },
-        "template": "{{customMessage}}expected {{jar}} {{type}} \"{{needle}}\"",
-        "showDiff": true,
-        "actual": "A Fazer\nTarefa\nAdicionar\nTarefa Pronta? Ação\ntarefa teste Não",
-        "expected": "novo",
-        "message": "expected web page to include \"novo\"",
-        "stack": "expected web page to include \"novo\"\n\nScenario Steps:\n\n- I.see(\"novo\") at Test.Scenario (src\\__tests__\\e2e\\tests\\task.js:33:7)\n- I.acceptPopup() at Test.Scenario (src\\__tests__\\e2e\\tests\\task.js:32:7)\n- I.click(\"#btnEdit\") at Test.Scenario (src\\__tests__\\e2e\\tests\\task.js:30:7)\n- I.see(\"tarefa teste\") at Test.Scenario (src\\__tests__\\e2e\\tests\\task.js:29:7)\n- I.click(\"#btnAdicionar\") at Test.Scenario (src\\__tests__\\e2e\\tests\\task.js:28:7)\n- I.fillField(\"#inputtask2\", \"tarefa teste\") at Test.Scenario (src\\__tests__\\e2e\\tests\\task.js:27:7)\n- I.amOnPage(\"http://localhost:4200/\") at Test.Scenario (src\\__tests__\\e2e\\tests\\task.js:26:7)\n\n"
-      }
-    }
-  ],
+  "failures": [],
   "passes": [
     {
       "title": "Adiciona uma tarefa a lista | Adiciona uma tarefas ao clicar em Adicionar - 1",
       "fullTitle": "Gestao de tarefas: Adiciona uma tarefa a lista | Adiciona uma tarefas ao clicar em Adicionar - 1",
-      "duration": 1515,
+      "duration": 1950,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "Adiciona e deleta uma tarefa | Deleta uma tarefa apos adiciona-la a lista - 1",
       "fullTitle": "Gestao de tarefas: Adiciona e deleta uma tarefa | Deleta uma tarefa apos adiciona-la a lista - 1",
-      "duration": 1806,
+      "duration": 2135,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Adiciona e renomeia uma tarefa | Renomeia uma tarefa apos adiciona-la a lista - 1",
+      "fullTitle": "Gestao de tarefas: Adiciona e renomeia uma tarefa | Renomeia uma tarefa apos adiciona-la a lista - 1",
+      "duration": 4974,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "Adiciona uma tarefa e seta como pronto | Seta como pronto a tarefa recem adicionada - 1",
       "fullTitle": "Gestao de tarefas: Adiciona uma tarefa e seta como pronto | Seta como pronto a tarefa recem adicionada - 1",
-      "duration": 1432,
+      "duration": 1796,
       "currentRetry": 0,
       "err": {}
     }

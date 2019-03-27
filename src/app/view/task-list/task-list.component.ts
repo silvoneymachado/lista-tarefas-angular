@@ -49,21 +49,10 @@ export class TaskListComponent implements OnInit {
   }
 
   public addTask(): void {
-    this.taskService.saveTask(this.task).then(res => {
-      if (res) {
-        this.task = new Task();
-        this.getTasks();
-      }
-    })
-    .catch(err => console.log(err));
-  }
-
-  public updateTask(t: Task): void {
-    const newName = prompt('Digite um novo nome para tarefa: ', t.name);
-    console.log(newName);
-    if (newName != null) {
-      t.name = newName;
-      this.taskService.updateTask(t).then(res => {
+    if (this.task.id > 0) {
+      this.updateTask(this.task);
+    } else {
+      this.taskService.saveTask(this.task).then(res => {
         if (res) {
           this.task = new Task();
           this.getTasks();
@@ -71,6 +60,27 @@ export class TaskListComponent implements OnInit {
       })
       .catch(err => console.log(err));
     }
+  }
+
+  public editTask(t: Task): void {
+    if (t) {
+      this.task = new Task(t.name, t.done, t.id);
+    } else {
+      this.task = new Task();
+    }
+  }
+
+  public updateTask(t: Task): void {
+    if (t) {
+      this.task = t;
+    }
+    this.taskService.updateTask(this.task).then(res => {
+      if (res) {
+        this.task = new Task();
+        this.getTasks();
+      }
+    })
+    .catch(err => console.log(err));
   }
 
 }

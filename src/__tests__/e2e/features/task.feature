@@ -29,9 +29,11 @@ Feature: Gestao de tarefas
         And I click on <#btnAdicionar>
       Then I see "tarefa teste"
       Then I click on <#btnEdit>
-      Then I type "novo" in the prompt
-      Then I accept the prompt
+      Then I see <#btnCancelarEdicao>
+      Then I fill <#inputtask2> with "novo"
+      Then I click on <#btnAdicionar>
       Then I see "novo"
+      Then I wait 3
 
     Scenario: Adiciona uma tarefa e seta como pronto
 
