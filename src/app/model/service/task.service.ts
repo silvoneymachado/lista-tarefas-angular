@@ -72,9 +72,14 @@ export class TaskService {
   }
 
   private setIdTask(t: Task): Task {
-    t.id = this.tasks[this.tasks.length -1].id + 1;
+    if(this.tasks.length === 0){
+      t.id = this.tasks.length + 1;
+    } else {
+      t.id = this.tasks[this.tasks.length -1].id + 1;
+    }
     return t;
   }
+
 
   public setDone(t: Task): Promise<boolean> {
     return new Promise<boolean>((resolve, reject) => {
