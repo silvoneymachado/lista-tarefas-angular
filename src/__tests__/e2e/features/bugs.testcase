@@ -4,7 +4,7 @@ importe "task.feature"
 
 @scenario(1)
 @variant(1)
-Caso de Teste: Trocar estado de pronto de tarefa em edição perde troca
+Caso de Teste: Trocar estado de pronto de tarefa em edição não perde troca
 
     Dado que estou em "http://localhost:4200/"
     Quando eu espero pelo texto "A Fazer"
@@ -26,7 +26,7 @@ Caso de Teste: Trocar estado de pronto de tarefa em edição perde troca
 
 @scenario(1)
 @variant(1)
-Caso de Teste: Remover tarefa em edição faz não readicionar
+Caso de Teste: Remover tarefa em edição faz readicionar
     Dado que estou em "http://localhost:4200/"
     Quando eu espero pelo texto "A Fazer"
       e eu informo "Comprar leite" em <#inputtask2>
