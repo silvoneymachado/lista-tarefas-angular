@@ -44,3 +44,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Parcel
+.cache
+
+# CodeceptJS
+src/__tests__/e2e/output
