@@ -1,0 +1,44 @@
+#language: pt
+
+importe "task.feature"
+
+@scenario(1)
+@variant(1)
+Caso de Teste: Trocar estado de pronto de tarefa em edição perde troca
+
+    Dado que estou em "http://localhost:4200/"
+    Quando eu espero pelo texto "A Fazer"
+      e eu informo "Comprar leite" em <#inputtask2>
+      e clico em <#btnAdicionar>
+    Então eu vejo "Comprar leite" em <.table>
+      e vejo "Não" em <.table>
+
+    Quando eu clico em <#btnEdit>
+
+    Quando eu clico em <#btnDone>
+    Então eu vejo "Sim" em <.table>
+
+    Quando eu informo "Comprar leite e pão" em <#inputtask2>
+      e clico em <#btnAdicionar>
+    Então eu vejo "Comprar leite e pão" em <.table>
+      e eu vejo "Sim" em <.table>
+
+
+@scenario(1)
+@variant(1)
+Caso de Teste: Remover tarefa em edição faz não readicionar
+    Dado que estou em "http://localhost:4200/"
+    Quando eu espero pelo texto "A Fazer"
+      e eu informo "Comprar leite" em <#inputtask2>
+      e clico em <#btnAdicionar>
+    Então eu vejo "Comprar leite" em <.table>
+      e vejo "Não" em <.table>
+
+    Quando eu clico em <#btnEdit>
+
+      e clico em <#btnDelete>
+      e aceito o alerta
+      e eu informo "Comprar leite e pão" em <#inputtask2>
+      e clico em <#btnAdicionar>
+
+    Então eu vejo "Comprar leite e pão" em <.table>
