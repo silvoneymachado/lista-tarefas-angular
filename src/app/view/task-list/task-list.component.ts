@@ -38,6 +38,7 @@ export class TaskListComponent implements OnInit {
   }
 
   public setDone(t: Task): void {
+    console.log('Clicou done');
     this.taskService
     .setDone(t)
     .then(res => {

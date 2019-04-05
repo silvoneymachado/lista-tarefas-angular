@@ -16,12 +16,12 @@ Caso de Teste: Trocar estado de pronto de tarefa em edição não perde troca
     Quando eu clico em <#btnEdit>
 
     Quando eu clico em <#btnDone>
-    Então eu vejo "Sim" em <.table>
+    Então eu vejo "Não" em <.table>
 
     Quando eu informo "Comprar leite e pão" em <#inputtask2>
       e clico em <#btnAdicionar>
     Então eu vejo "Comprar leite e pão" em <.table>
-      e eu vejo "Sim" em <.table>
+      e eu vejo "Não" em <.table>
 
 
 @scenario(1)
@@ -37,7 +37,7 @@ Caso de Teste: Remover tarefa em edição faz readicionar
     Quando eu clico em <#btnEdit>
 
       e clico em <#btnDelete>
-      e aceito o alerta
+      e não vejo o alerta
       e eu informo "Comprar leite e pão" em <#inputtask2>
       e clico em <#btnAdicionar>
 

@@ -25,15 +25,15 @@
             <td>{{t.name}}</td>
             <td>{{t.done ? 'Sim' : 'Não'}} </td>
             <td>
-              <button  type="button" (click)="setDone(t)" class="btn btn-primary mb-2" id="btnDone" title="Pronto">
+              <button  type="button" (click)="setDone(t)" class="btn btn-primary mb-2" id="btnDone" title="Pronto" [disabled]="task.id > 0">
                 <fa name="check-square"></fa>
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-secondary mb-2" (click)="editTask(t)" title="Editar" id="btnEdit"><fa name="edit" animation="none"></fa> </button>
+              <button type="button" class="btn btn-secondary mb-2" (click)="editTask(t)" title="Editar" id="btnEdit" [disabled]="task.id > 0"><fa name="edit" animation="none"></fa> </button>
             </td>
             <td>
-              <button type="button" (click)="delete(t)"  class="btn btn-danger mb-2" id="btnDelete" title="Deletar"><fa name="trash" animation="none"></fa></button>
+              <button type="button" (click)="delete(t)"  class="btn btn-danger mb-2" id="btnDelete" title="Deletar" [disabled]="task.id > 0"><fa name="trash" animation="none"></fa></button>
             </td>
           </tr>
           <tr *ngIf="!tasks || tasks.length === 0">
